@@ -1,9 +1,9 @@
 package spaceshipsuper
 
 import (
-	"time"
 	"encoding/json"
-	
+	"time"
+
 	"github.com/michaelmcallister/spaceshipsuper/http"
 )
 
@@ -13,30 +13,30 @@ const apiEndpointBase = "https://api.spaceship.com.au"
 // Additionally it also holds some internal state to ensure the accessToken
 // remains valid.
 type Client struct {
-	Username string
-	Password string
+	Username    string
+	Password    string
 	accessToken string
-	expiry time.Time
+	expiry      time.Time
 }
 
 // Account represents the return structure of the "GetAccount" method.
 type Account struct {
 	Member struct {
-		Title                       string 
-		FirstName                   string    `json:"first_name"`
-		LastName                    string    `json:"last_name"`
-		MemberGroup                 string    `json:"member_group"`
-		AccountNumber               string    `json:"account_number"`
-		SupertickStatus             string    `json:"supertick_status"`
+		Title                       string
+		FirstName                   string `json:"first_name"`
+		LastName                    string `json:"last_name"`
+		MemberGroup                 string `json:"member_group"`
+		AccountNumber               string `json:"account_number"`
+		SupertickStatus             string `json:"supertick_status"`
 		Age                         int
-		TfnStatus                   string    `json:"tfn_status"`
-		Phone                       string 
-		AccountBalance              float64   `json:"account_balance"`
-		AccountBalanceContributions float64   `json:"account_balance_contributions"`
-		AccountBalanceFees          float64   `json:"account_balance_fees"`
-		AccountBalanceIncome        float64   `json:"account_balance_income"`
-		AccountBalanceInsurance     float64   `json:"account_balance_insurance"`
-		AccountBalanceTaxes         float64   `json:"account_balance_taxes"`
+		TfnStatus                   string `json:"tfn_status"`
+		Phone                       string
+		AccountBalance              float64 `json:"account_balance"`
+		AccountBalanceContributions float64 `json:"account_balance_contributions"`
+		AccountBalanceFees          float64 `json:"account_balance_fees"`
+		AccountBalanceIncome        float64 `json:"account_balance_income"`
+		AccountBalanceInsurance     float64 `json:"account_balance_insurance"`
+		AccountBalanceTaxes         float64 `json:"account_balance_taxes"`
 		Gender                      string
 		Email                       string
 		Status                      string

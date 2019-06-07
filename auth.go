@@ -1,9 +1,9 @@
 package spaceshipsuper
 
 import (
-	"time"
 	"encoding/base64"
 	"encoding/json"
+	"time"
 
 	"github.com/michaelmcallister/spaceshipsuper/http"
 )
@@ -45,7 +45,7 @@ func basicAuth(username, password string) string {
 // behaviour.
 func (c *Client) refreshAuth(force bool) error {
 	// If our token hasn't expired and we aren't forcing a new one, just re-use.
-	if (!force && time.Now().Before(c.expiry)) {
+	if !force && time.Now().Before(c.expiry) {
 		return nil
 	}
 
