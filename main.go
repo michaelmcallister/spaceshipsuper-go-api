@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/michaelmcallister/spaceshipsuper/http"
+	"github.com/michaelmcallister/spaceshipsuper-go-api/http"
 )
 
 const apiEndpointBase = "https://api.spaceship.com.au"
